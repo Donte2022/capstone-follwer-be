@@ -32,6 +32,17 @@ public class CompletedStage {
     public CompletedStage() {
     }
 
+    public CompletedStage(Long idOfTitle, Date startDate, Date endDate, String description, String stageTitle, String process, String prompt, String response) {
+        this.idOfTitle = idOfTitle;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.description = description;
+        StageTitle = stageTitle;
+        this.process = process;
+        this.prompt = prompt;
+        this.response = response;
+    }
+
     public Long getId() {
         return id;
     }

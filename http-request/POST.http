@@ -1,0 +1,21 @@
+
+POST http://localhost:8888/api/completedstage
+Content-Type: application/json
+
+{
+  "idOfTitle": 1,
+
+ "startDate": "2020-03-08",
+
+  "endDate": "2020-03-08",
+
+  "description": "How to cook eggs the EZ way",
+
+ "StageTitle": "Eggs and Bacon",
+
+ "process": "Add Heat",
+
+  "prompt": "How much heat?",
+
+  "response": "Medium would be best"
+}
