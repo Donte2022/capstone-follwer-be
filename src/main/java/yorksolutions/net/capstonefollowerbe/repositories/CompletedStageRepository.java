@@ -10,5 +10,4 @@ import java.util.Optional;
 public interface CompletedStageRepository extends CrudRepository<CompletedStage, Long> {
 
 
-//    Optional<CompletedStage> findByStageTitle();
 }

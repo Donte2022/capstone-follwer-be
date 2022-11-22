@@ -53,13 +53,11 @@ public class CompletedStageService {
         if(updateStage.isEmpty()) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
-
         CompletedStage completedStage = updateStage.get();
         completedStage.setStageTitle(requestDTO.StageTitle);
         completedStage.setStartDate(requestDTO.startDate);
         completedStage.setEndDate(requestDTO.endDate);
         completedStage.setDescription(requestDTO.description);
-
         return completedStageRepository.save(completedStage);
     }
 }
