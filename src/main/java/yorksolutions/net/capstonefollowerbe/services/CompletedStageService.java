@@ -22,8 +22,8 @@ public class CompletedStageService {
 
         try {
             return this.completedStageRepository.save(
-                    new CompletedStage(requestDTO.idOfTitle, requestDTO.startDate, requestDTO.endDate, requestDTO.description,
-                            requestDTO.response, requestDTO.process, requestDTO.prompt, requestDTO.StageTitle));
+                    new CompletedStage(requestDTO.idOfTitle, requestDTO.stageId, requestDTO.startDate, requestDTO.endDate, requestDTO.description,
+                            requestDTO.response, requestDTO.response2, requestDTO.response3, requestDTO.response4, requestDTO.process, requestDTO.prompt, requestDTO.prompt2, requestDTO.prompt3, requestDTO.prompt4, requestDTO.stageTitle));
 
 
         } catch (RuntimeException exception) {
@@ -54,7 +54,7 @@ public class CompletedStageService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
         CompletedStage completedStage = updateStage.get();
-        completedStage.setStageTitle(requestDTO.StageTitle);
+        completedStage.setStageTitle(requestDTO.stageTitle);
         completedStage.setStartDate(requestDTO.startDate);
         completedStage.setEndDate(requestDTO.endDate);
         completedStage.setDescription(requestDTO.description);
